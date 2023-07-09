@@ -25,14 +25,12 @@
             readonly
           />
           <br />
-          <button id="createPass">Create</button>
-          <button id="copyPass">Copy</button>
         </div>
         <br />
         <div class="options">
           <div>
             <label for="passLength">Choose the length of your password</label>
-            <input type="number" id="passLength" />
+            <input type="number" id="passLength" min="4" max="72" />
 
             <div class="passProp">
               <h4>Which of these characters should be included:</h4>
@@ -41,11 +39,31 @@
               <span>0-9 <input type="checkbox" id="number" /></span>
               <span
                 >Special characters "!@#$%^&*()
-                <input type="checkbox" id="number"
+                <input type="checkbox" id="specChar"
               /></span>
+              <div id="extraProp">
+                <div id="extraProp__cap">
+                  How many captalized letters:
+                  <input type="number" id="upsNumber" min="1" max="26" />
+                </div>
+                <div id="extraProp__num">
+                  How many numbers:
+                  <input type="number" id="numsNumber" min="1" max="20" />
+                </div>
+                <div id="extraProp__spec">
+                  How many special characters:
+                  <input type="number" id="specsNumber" min="1" max="10" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <button id="createPass">Create</button>
+        <button id="copyPass">Copy</button>
+
+        <hr />
+
+        <p id="demo"></p>
       </div>
     </main>
 
