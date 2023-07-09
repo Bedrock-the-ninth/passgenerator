@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Bedrock" />
+    <title>Password Generator</title>
+
+    <!-- CSS IMPORT -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Password Generator</h1>
+      <h3>Coded by: Bedrock-the-ninth</h3>
+    </div>
+    <hr />
+    <main>
+      <div>
+        <div>
+          <input
+            type="text"
+            placeholder="Create password"
+            id="password"
+            readonly
+          />
+          <br />
+          <button id="createPass">Create</button>
+          <button id="copyPass">Copy</button>
+        </div>
+        <br />
+        <div class="options">
+          <div>
+            <label for="passLength">Choose the length of your password</label>
+            <input type="number" id="passLength" />
+
+            <div class="passProp">
+              <h4>Which of these characters should be included:</h4>
+              <span>a-z <input type="checkbox" id="lowCase" checked /></span>
+              <span>A-Z <input type="checkbox" id="upCase" /></span>
+              <span>0-9 <input type="checkbox" id="number" /></span>
+              <span
+                >Special characters "!@#$%^&*()
+                <input type="checkbox" id="number"
+              /></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- JS IMPORT -->
+    <script src="./main.js"></script>
+  </body>
+</html>
