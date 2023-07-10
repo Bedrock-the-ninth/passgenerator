@@ -83,14 +83,12 @@ class PasswordGenerator {
   };
 
   copyToClipboard = () => {
-    navigator.clipboard
-      .writeText(document.getElementById("password").value)
-      .then(() => {
-        alert("Successfully copied to clipboard!");
-      })
-      .catch(() => {
-        alert("Not succesful!");
-      });
+    if (document.getElementById("password").value.length >= 4) {
+      navigator.clipboard.writeText(document.getElementById("password").value);
+      alert("Password has been successfully copied to your clipboard");
+    } else {
+      alert("Nothing can come of nothing! First try creating the password");
+    }
   };
 }
 

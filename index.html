@@ -10,23 +10,20 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div>
-      <h1>Password Generator</h1>
-      <h3>Coded by: Bedrock-the-ninth</h3>
+    <div class="navbar">
+      <ul class="navbar-nav">
+        <li class="navbar-item"><h1>Password Generator</h1></li>
+        <li class="navbar-item"><h3>Programmed by: Bedrock-the-ninth</h3></li>
+      </ul>
     </div>
-    <hr />
-    <main>
+
+    <main class="container">
       <div>
         <div>
-          <input
-            type="text"
-            placeholder="Create password"
-            id="password"
-            readonly
-          />
-          <br />
+          <input type="text" placeholder="Password" id="password" readonly />
+          <button id="createPass">Create</button>
+          <button id="copyPass">Copy</button>
         </div>
-        <br />
         <div class="options">
           <div>
             <label for="passLength">Choose the length of your password</label>
@@ -78,10 +75,6 @@
             </div>
           </div>
         </div>
-        <button id="createPass">Create</button>
-        <button id="copyPass">Copy</button>
-
-        <hr />
 
         <p id="demo"></p>
       </div>
