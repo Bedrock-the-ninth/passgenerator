@@ -34,7 +34,6 @@
 
             <div class="passProp">
               <h4>Which of these characters should be included:</h4>
-              <span>a-z <input type="checkbox" id="lowCase" checked /></span>
               <span>A-Z <input type="checkbox" id="upCase" /></span>
               <span>0-9 <input type="checkbox" id="number" /></span>
               <span
@@ -44,15 +43,36 @@
               <div id="extraProp">
                 <div id="extraProp__cap">
                   How many captalized letters:
-                  <input type="number" id="upsNumber" min="1" max="26" />
+                  <input
+                    type="number"
+                    id="upsNumber"
+                    min="1"
+                    max="26"
+                    value="1"
+                    disabled
+                  />
                 </div>
                 <div id="extraProp__num">
                   How many numbers:
-                  <input type="number" id="numsNumber" min="1" max="20" />
+                  <input
+                    type="number"
+                    id="numsNumber"
+                    min="1"
+                    max="20"
+                    value="1"
+                    disabled
+                  />
                 </div>
                 <div id="extraProp__spec">
                   How many special characters:
-                  <input type="number" id="specsNumber" min="1" max="10" />
+                  <input
+                    type="number"
+                    id="specsNumber"
+                    min="1"
+                    max="10"
+                    value="1"
+                    disabled
+                  />
                 </div>
               </div>
             </div>
