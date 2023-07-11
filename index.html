@@ -17,28 +17,60 @@
       </ul>
     </div>
 
-    <main class="container">
-      <div>
-        <div>
-          <input type="text" placeholder="Password" id="password" readonly />
-          <button id="createPass">Create</button>
-          <button id="copyPass">Copy</button>
-        </div>
-        <div class="options">
-          <div>
-            <label for="passLength">Choose the length of your password</label>
-            <input type="number" id="passLength" min="4" max="72" />
+    <main>
+      <div class="container">
+        <div class="inOutCard">
+          <div class="mainProp">
+            <input
+              type="text"
+              placeholder="Password"
+              id="password"
+              readonly
+              class="mainProp__output"
+            />
+            <button id="createPass" class="mainProp__button">Create</button>
+            <button id="copyPass" class="mainProp__button">Copy</button>
+          </div>
+          <!-- <hr /> -->
 
-            <div class="passProp">
-              <h4>Which of these characters should be included:</h4>
-              <span>A-Z <input type="checkbox" id="upCase" /></span>
-              <span>0-9 <input type="checkbox" id="number" /></span>
-              <span
-                >Special characters "!@#$%^&*()
-                <input type="checkbox" id="specChar"
-              /></span>
-              <div id="extraProp">
-                <div id="extraProp__cap">
+          <div class="passLengthInput">
+            <label for="passLength" class="passLengthInput__text"
+              ><h4 class="passLength__h4">
+                Choose the length of your password:
+              </h4></label
+            >
+            <input
+              type="number"
+              id="passLength"
+              min="4"
+              max="72"
+              class="passLengthInput__input"
+            />
+          </div>
+
+          <!-- <hr /> -->
+
+          <div class="passProp">
+            <h4 class="passProp__title">
+              Which of these characters should be included:
+            </h4>
+            <div class="passProp__container">
+              <div class="passProp__checkOptions">
+                <span class="passProp__text"
+                  >A-Z <input type="checkbox" id="upCase"
+                /></span>
+
+                <span class="passProp__text"
+                  >0-9 <input type="checkbox" id="number"
+                /></span>
+
+                <span class="passProp__text"
+                  >!@#$%^&*() <input type="checkbox" id="specChar"
+                /></span>
+              </div>
+
+              <div class="passProp__extraProp-container">
+                <div id="extraProp__cap" class="passProp__extraProp-item">
                   How many captalized letters:
                   <input
                     type="number"
@@ -47,9 +79,10 @@
                     max="26"
                     value="1"
                     disabled
+                    class="extraProp__input"
                   />
                 </div>
-                <div id="extraProp__num">
+                <div id="extraProp__num" class="passProp__extraProp-item">
                   How many numbers:
                   <input
                     type="number"
@@ -58,9 +91,10 @@
                     max="20"
                     value="1"
                     disabled
+                    class="extraProp__input"
                   />
                 </div>
-                <div id="extraProp__spec">
+                <div id="extraProp__spec" class="passProp__extraProp-item">
                   How many special characters:
                   <input
                     type="number"
@@ -69,14 +103,13 @@
                     max="10"
                     value="1"
                     disabled
+                    class="extraProp__input"
                   />
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <p id="demo"></p>
       </div>
     </main>
 

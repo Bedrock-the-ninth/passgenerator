@@ -20,24 +20,39 @@ class PasswordGenerator {
     document.getElementById("upCase").addEventListener("change", () => {
       document.getElementById("upsNumber").disabled =
         !document.getElementById("upCase").checked;
+      this.textCheckBoxCheck();
     });
 
     document.getElementById("number").addEventListener("change", () => {
       document.getElementById("numsNumber").disabled =
         !document.getElementById("number").checked;
+      this.textCheckBoxCheck();
     });
 
     document.getElementById("specChar").addEventListener("change", () => {
       document.getElementById("specsNumber").disabled =
         !document.getElementById("specChar").checked;
+      this.textCheckBoxCheck();
     });
   };
 
-  // contentCheck = () => {
-  //   document.getElementById("password").addEventListener("change", () => {
-  //     document.getElementById("copyPass").disabled = !;
-  //   });
-  // };
+  textCheckBoxCheck = () => {
+    if (document.getElementById("upsNumber").disabled == false) {
+      document.getElementById("extraProp__cap").style.color = "black";
+    } else {
+      document.getElementById("extraProp__cap").style.color = "#aaa";
+    }
+    if (document.getElementById("numsNumber").disabled == false) {
+      document.getElementById("extraProp__num").style.color = "black";
+    } else {
+      document.getElementById("extraProp__num").style.color = "#aaa";
+    }
+    if (document.getElementById("specsNumber").disabled == false) {
+      document.getElementById("extraProp__spec").style.color = "black";
+    } else {
+      document.getElementById("extraProp__spec").style.color = "#aaa";
+    }
+  };
 
   generatePassword = () => {
     const passLength = parseInt(document.getElementById("passLength").value);
@@ -95,6 +110,7 @@ class PasswordGenerator {
 const passwordGenerator = new PasswordGenerator();
 
 passwordGenerator.checkboxCheck();
+passwordGenerator.textCheckBoxCheck();
 
 const createBtn = document.getElementById("createPass");
 createBtn.addEventListener("click", () => {

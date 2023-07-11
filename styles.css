@@ -15,15 +15,25 @@ h3{
     font-weight: 500;
     margin: 0;
 }
+h4{
+    font-size: large;
+}
 ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
+hr{
+    max-width: 10%;
+    border-top: 10px rgba(29, 91, 121, .9) dotted;
+    margin: 20px auto;
+    outline: none;
+
+}
 
 
 .navbar{
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-90deg, #1D5B79,#F3AA60, #468B97, #EF6262);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     height: 100vh;
@@ -49,11 +59,167 @@ ul{
 }
 .navbar-item {
     
-    display: inline-block;
+    display: flex;
 }
 
 
 .container{
  height: 100vh;
  text-align: center;
+ 
+}
+
+.inOutCard{
+    border: 1px solid;
+    background-color: #F8FDCF;
+    border-color: #468B97;
+    max-width: 70%;
+    max-height: fit-content;
+    margin: 60px auto;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 90vh;
+}
+
+.mainProp__output{
+    display: flex;
+    height: 70px;
+    width: 75%;
+    margin: 10px auto;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    font-weight: 600;
+    outline: none;
+    border-radius: 10px 0 10px 0;
+    border-style: solid;
+    border-color: #468B97;
+    color: #1D5B79;
+}
+.mainProp__output:focus{
+    background-color: #EF6262;
+    border: 3px solid #F3AA60;
+    
+}
+
+.mainProp__button{
+    width: 25%;
+    height: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #468B97;
+    color: #1D5B79;
+    margin: 10px 0px;
+}
+.mainProp__button:hover{
+    background-color: #F3AA60;
+    font-weight: 600;
+}
+
+.passLengthInput{
+    display: flex;
+    max-width: 75%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.passLengthInput__text{
+    position: relative;
+    font-size: large;
+    width: 70%;
+    display: flex;
+    align-items: start;
+}
+.passLength__h4{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+.passLengthInput__input{
+    width: 50%;
+    height: 35px;
+    vertical-align: middle;
+    font-family: "Montserrat", sans-serif;
+    font-size: small;
+    font-weight: 500;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #468B97;
+    color: #1D5B79;
+    margin: 10px 0px;
+    outline: none;
+}
+.passLengthInput__input:focus{
+    background-color: #F3AA60;
+    font-weight: 600;
+}
+
+.passProp__title{
+    display: block;
+}
+
+.passProp__text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.passProp__container{
+    display: flex;
+    width: 75%;
+    margin: 10px auto;
+    height: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.passProp__checkOptions{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+
+
+.passProp__extraProp-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-content: stretch;
+}
+
+.passProp__extraProp-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.extraProp__input{
+    width: 20%;
+    height: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-size: small;
+    font-weight: 500;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #468B97;
+    color: #1D5B79;
+    margin: 10px 0px;
+    outline: none;
+}
+.extraProp__input:focus{
+    background-color: #F3AA60;
+    font-weight: 600;
 }
