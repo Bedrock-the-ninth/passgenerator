@@ -40,10 +40,19 @@ hr{
     outline: none;
 
 }
-
+a{
+  color: currentColor;
+  opacity: 0.5;
+  text-decoration: none;
+}
+a:visited, a:link{
+  color: currentColor;
+  opacity: 0.5;
+  text-decoration: none;
+}
 
 .navbar{
-    background: linear-gradient(-90deg, #FD8A8A,#A8D1D1, #F1F7B5, #9EA1D4);
+    background: linear-gradient(-90deg, #071952,#0B666A, #35A29F, #97FEED);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     height: auto;
@@ -76,7 +85,7 @@ hr{
 
 
 .container{
- height: 100vh;
+ height: 100%;
  text-align: center;
  
 }
@@ -234,4 +243,24 @@ hr{
 .extraProp__input:focus{
     background-color: #F1F7B5;
     font-weight: 600;
+}
+
+.footer{
+    border-top: 2px solid #9EA1D4;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+}
+.footer:hover{
+    background-color: #9EA1D4;
+}
+
+.icons{
+    width: 30px;
+    height: 30px;
+}
+
+.footer__content{
+    margin-top: 20px;
 }
