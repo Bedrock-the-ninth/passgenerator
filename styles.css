@@ -9,11 +9,21 @@ body {
 h1 {
     font-weight: 800;
     margin: 0;
+    text-shadow:
+    -1px -1px 0 #9EA1D4,
+    1px -1px 0 #9EA1D4,
+    -1px 1px 0 #9EA1D4,
+    1px 1px 0 #9EA1D4;
 }
 h3{
     font-style: italic;
     font-weight: 500;
     margin: 0;
+    text-shadow:
+    -1px -1px 0 #9EA1D4,
+    1px -1px 0 #9EA1D4,
+    -1px 1px 0 #9EA1D4,
+    1px 1px 0 #9EA1D4;
 }
 h4{
     font-size: large;
@@ -33,7 +43,7 @@ hr{
 
 
 .navbar{
-    background: linear-gradient(-90deg, #1D5B79,#F3AA60, #468B97, #EF6262);
+    background: linear-gradient(-90deg, #FD8A8A,#A8D1D1, #F1F7B5, #9EA1D4);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     height: auto;
@@ -73,8 +83,8 @@ hr{
 
 .inOutCard{
     border: 1px solid;
-    background-color: #F8FDCF;
-    border-color: #468B97;
+    background-color: rgba(168, 209, 209,.5);
+    border-color: #FD8A8A;
     max-width: 70%;
     max-height: fit-content;
     margin: 60px auto;
@@ -95,11 +105,11 @@ hr{
     outline: none;
     border-radius: 10px 0 10px 0;
     border-style: solid;
-    border-color: #468B97;
+    border-color: #FD8A8A;
     color: #1D5B79;
 }
 .mainProp__output:focus{
-    background-color: #EF6262;
+    background-color: #F1F7B5;
     border: 3px solid #F3AA60;
     
 }
@@ -112,12 +122,12 @@ hr{
     font-weight: 400;
     border-radius: 5px;
     border-style: solid;
-    border-color: #468B97;
+    border-color: #FD8A8A;
     color: #1D5B79;
     margin: 10px 0px;
 }
 .mainProp__button:hover{
-    background-color: #F3AA60;
+    background-color: #9EA1D4;
     font-weight: 600;
 }
 
@@ -149,13 +159,13 @@ hr{
     font-weight: 500;
     border-radius: 5px;
     border-style: solid;
-    border-color: #468B97;
+    border-color: #FD8A8A;
     color: #1D5B79;
     margin: 10px 0px;
     outline: none;
 }
 .passLengthInput__input:focus{
-    background-color: #F3AA60;
+    background-color: #F1F7B5;
     font-weight: 600;
 }
 
@@ -216,12 +226,12 @@ hr{
     font-weight: 500;
     border-radius: 5px;
     border-style: solid;
-    border-color: #468B97;
+    border-color: #FD8A8A;
     color: #1D5B79;
     margin: 10px 0px;
     outline: none;
 }
 .extraProp__input:focus{
-    background-color: #F3AA60;
+    background-color: #F1F7B5;
     font-weight: 600;
 }
