@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@600;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* Tag selectors */
+
+body{
+    background-color: #F7FFE5;
+    font-family: "Roboto Condensed" !important;
+    margin: 0;
+    padding: 0;
+}
+
+
+h2{
+    font-size: 2rem !important;
+}
+
+
+
+/* Navbar section */
+
+.brand-title{
+    font-size: 3.5rem !important;
+    color: #F7FFE5 !important;
+    margin: 2% 3% 1%;
+}
+
+.sub-title{
+    font-size: 1.5rem;
+
+}
+
+#navbar{
+    font-family: "REM";
+    background-color: #A0C49D;
+    font-size: 2.5rem;
+}
+
+
+/* Passcard */
+
+.pass-card{
+    background-color: #E1ECC8 !important;
+}
+
+.pass-buttons{
+    width: 50%;
+}
+
+#password{
+    background-color: #F7FFE5;
+    display: block;
+    text-align: center;
+    margin: 2% auto 10%;
+    width: 50%;
+    height: 60%;
+    border: 1px solid black;
+}
+
+
+
+
+/* Footer section */
+
+#footer{
+    text-align: center;
+    position: fixed;
+    /* bottom: 0; */
+    margin: auto;
+}
+
+
+
+
+@media (max-width: 576px) {
+    /* title might encounter problems */
+}
+
+@media (max-width: 1399px){
+    /* footer */
+}
