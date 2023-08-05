@@ -41,6 +41,7 @@ h2{
 
 .pass-card{
     background-color: #E1ECC8 !important;
+    
 }
 
 .pass-buttons{
@@ -58,6 +59,11 @@ h2{
 }
 
 
+/* Properties section */
+.rounded{
+    border:1px solid;
+}
+
 
 
 /* Footer section */
@@ -72,10 +78,16 @@ h2{
 
 
 
-@media (max-width: 576px) {
-    /* title might encounter problems */
+@media (max-width: 1399px){
+    #footer{
+        border-top: 1px solid black;
+        bottom: 3%;
+        padding: 1%;
+    }
 }
 
-@media (max-width: 1399px){
-    /* footer */
+/* Classes used through DOM manipulation */
+.disabled{
+    color: #aaa;
+    pointer-events: none;
 }

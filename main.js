@@ -1,3 +1,29 @@
+// Checkboxes checker functionality
+$("#upCase").on("change", () => {
+  if ($("#upsNumber").hasClass("disabled")) {
+    $("#upsNumber").removeClass("disabled");
+  } else {
+    $("#upsNumber").addClass("disabled");
+  }
+});
+
+$("#number").on("change", () => {
+  if ($("#numsNumber").hasClass("disabled")) {
+    $("#numsNumber").removeClass("disabled");
+  } else {
+    $("#numsNumber").addClass("disabled");
+  }
+});
+
+$("#specChar").on("change", () => {
+  if ($("#specsNumber").hasClass("disabled")) {
+    $("#specsNumber").removeClass("disabled");
+  } else {
+    $("#specsNumber").addClass("disabled");
+  }
+});
+
+// Password generator OBJ
 class PasswordGenerator {
   constructor() {
     this.nums = "0123456789";
@@ -13,45 +39,6 @@ class PasswordGenerator {
       chars.push(charSet[randomIndex]);
     }
     return chars.join("");
-  };
-
-  checkboxCheck = () => {
-    // These few statments are to remove the number input selectors from the DOM if the checkbox is not checked
-    document.getElementById("upCase").addEventListener("change", () => {
-      document.getElementById("upsNumber").disabled =
-        !document.getElementById("upCase").checked;
-      this.textCheckBoxCheck();
-    });
-
-    document.getElementById("number").addEventListener("change", () => {
-      document.getElementById("numsNumber").disabled =
-        !document.getElementById("number").checked;
-      this.textCheckBoxCheck();
-    });
-
-    document.getElementById("specChar").addEventListener("change", () => {
-      document.getElementById("specsNumber").disabled =
-        !document.getElementById("specChar").checked;
-      this.textCheckBoxCheck();
-    });
-  };
-
-  textCheckBoxCheck = () => {
-    if (document.getElementById("upsNumber").disabled == false) {
-      document.getElementById("extraProp__cap").style.color = "black";
-    } else {
-      document.getElementById("extraProp__cap").style.color = "#aaa";
-    }
-    if (document.getElementById("numsNumber").disabled == false) {
-      document.getElementById("extraProp__num").style.color = "black";
-    } else {
-      document.getElementById("extraProp__num").style.color = "#aaa";
-    }
-    if (document.getElementById("specsNumber").disabled == false) {
-      document.getElementById("extraProp__spec").style.color = "black";
-    } else {
-      document.getElementById("extraProp__spec").style.color = "#aaa";
-    }
   };
 
   generatePassword = () => {
@@ -107,17 +94,14 @@ class PasswordGenerator {
   };
 }
 
+// OBJ creation
 const passwordGenerator = new PasswordGenerator();
 
-passwordGenerator.checkboxCheck();
-passwordGenerator.textCheckBoxCheck();
-
-const createBtn = document.getElementById("createPass");
-createBtn.addEventListener("click", () => {
+// Pass creation and copy-to-clipboard functionality
+$("#createPass").click(() => {
   passwordGenerator.generatePassword();
 });
 
-const copyBtn = document.getElementById("copyPass");
-copyBtn.addEventListener("click", () => {
+$("#copyPass").click(() => {
   passwordGenerator.copyToClipboard();
 });
