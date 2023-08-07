@@ -3,16 +3,27 @@
 
 /* Tag selectors */
 
+/* *{
+    margin: 0;
+} */
+
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
     background-color: #F7FFE5;
     font-family: "Roboto Condensed" !important;
     margin: 0;
     padding: 0;
 }
 
-
 h2{
     font-size: 2rem !important;
+}
+
+main{
+    flex-grow: 1;
 }
 
 
@@ -38,6 +49,7 @@ h2{
 
 
 /* Passcard */
+#copyPass
 
 .pass-card{
     background-color: #E1ECC8 !important;
@@ -52,7 +64,7 @@ h2{
     background-color: #F7FFE5;
     display: block;
     text-align: center;
-    margin: 2% auto 10%;
+    margin: 2% auto 7%;
     width: 50%;
     height: 60%;
     border: 1px solid black;
@@ -64,27 +76,37 @@ h2{
     border:1px solid;
 }
 
+.pass-length-label{
+    text-align: end;
+}
 
+.checkbox-section{
+    text-align: start;
+}
 
-/* Footer section */
-
-#footer{
-    text-align: center;
-    position: fixed;
-    /* bottom: 0; */
-    margin: auto;
+.pass-prop-label{
+    text-align: end;
 }
 
 
 
+/* Media querries */
 
-@media (max-width: 1399px){
-    #footer{
-        border-top: 1px solid black;
-        bottom: 3%;
-        padding: 1%;
+@media (min-width: 992px){
+    .pass-length-prop{
+        width: 50%;
+        text-align: center;
     }
+    .pass-length-label{
+        text-align: center;
+    }
+    .pass-prop-label{
+        text-align: center;
+    }
+
 }
+
+
 
 /* Classes used through DOM manipulation */
 .disabled{

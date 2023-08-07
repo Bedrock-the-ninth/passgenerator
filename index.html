@@ -18,137 +18,142 @@
   </head>
   <body>
     <!-- NAVBAR section -->
-    <section id="navbar">
-      <nav class="navbar navbar-expand-sm navbar-dark">
-        <a
-          href="https://bedrock-the-ninth.github.io/passgenerator/"
-          class="navbar-brand brand-title"
-          ><h1>Password Generator</h1></a
-        >
-        <div class="container-fluid">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                href="https://github.com/Bedrock-the-ninth"
-                class="nav-link sub-title"
-                ><h3 class="display">Programmed by: Bedrock-the-ninth</h3></a
+    <main>
+      <section id="navbar">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+          <a
+            href="https://bedrock-the-ninth.github.io/passgenerator/"
+            class="navbar-brand brand-title"
+            ><h1>Password Generator</h1></a
+          >
+          <div class="container-fluid">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  href="https://github.com/Bedrock-the-ninth"
+                  class="nav-link sub-title"
+                  ><h3 class="display">Programmed by: Bedrock-the-ninth</h3></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Card section -->
+      <div class="container card ms-auto my-4 py-2 text-center pass-card">
+        <section id="main-section" class="card-header">
+          <div class="row">
+            <div class="col-12">
+              <input
+                type="text"
+                placeholder="Password"
+                id="password"
+                class="rounded"
+                readonly
+              />
+            </div>
+
+            <div class="col-12">
+              <button
+                id="createPass"
+                class="btn btn-sm btn-success pass-buttons"
               >
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </section>
-
-    <!-- Card section -->
-    <div class="container card ms-auto my-4 py-2 text-center pass-card">
-      <section id="main-section" class="card-header">
-        <div class="row">
-          <div class="col-12">
-            <input
-              type="text"
-              placeholder="Password"
-              id="password"
-              class="rounded"
-              readonly
-            />
-          </div>
-          <div class="col-6 text-end">
-            <button id="createPass" class="btn btn-lg btn-dark pass-buttons">
-              Create
-            </button>
-          </div>
-          <div class="col-6 text-start">
-            <button
-              id="copyPass"
-              class="btn btn-lg btn-outline-dark pass-buttons"
-            >
-              Copy
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Pass Properties -->
-
-      <section id="pass-properties" class="card-body">
-        <div class="row">
-          <div class="col-9">
-            <label for="passLength"
-              ><h4>Choose the length of your password:</h4></label
-            >
-          </div>
-          <div class="col-3 text-start">
-            <input
-              type="number"
-              id="passLength"
-              min="4"
-              max="72"
-              class="rounded"
-            />
-          </div>
-        </div>
-
-        <div class="row my-3">
-          <div class="col-7 text-end">
-            <h4>Which of these characters should be included:</h4>
-          </div>
-          <div class="col-5 text-start">
-            <div>
-              <span>A-Z <input type="checkbox" id="upCase" /></span>
-
-              <span>0-9 <input type="checkbox" id="number" /></span>
-
-              <span>!@#$%^&*() <input type="checkbox" id="specChar" /></span>
+                Create
+              </button>
             </div>
+            <div class="col-12">
+              <button
+                id="copyPass"
+                class="btn btn-sm btn-outline-success pass-buttons"
+              >
+                Copy
+              </button>
+            </div>
+          </div>
+        </section>
 
-            <div>
-              <div id="extraProp__cap">
-                How many captalized letters:
-                <input
-                  type="number"
-                  id="upsNumber"
-                  min="1"
-                  max="26"
-                  value="1"
-                  class="rounded ms-1 disabled"
-                />
+        <!-- Pass Properties -->
+
+        <section id="pass-properties" class="card-body">
+          <div class="row">
+            <div class="col-7 col-lg-12 pass-length-label">
+              <label for="passLength"
+                ><h4>Choose the length of your password:</h4></label
+              >
+            </div>
+            <div class="col-5 col-lg-12">
+              <input
+                type="number"
+                id="passLength"
+                min="4"
+                max="72"
+                class="rounded pass-length-prop"
+              />
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-7 col-lg-12 pass-prop-label">
+              <h4>Which of these characters should be included:</h4>
+            </div>
+            <div class="col-5 col-lg-3 container pass-prop-input">
+              <div class="checkbox-section">
+                <span>A-Z <input type="checkbox" id="upCase" /></span>
+
+                <span>0-9 <input type="checkbox" id="number" /></span>
+
+                <span>!@#$%^&*() <input type="checkbox" id="specChar" /></span>
               </div>
-              <div id="extraProp__num">
-                How many numbers:
-                <input
-                  type="number"
-                  id="numsNumber"
-                  min="1"
-                  max="20"
-                  value="1"
-                  class="rounded ms-1 disabled"
-                />
-              </div>
-              <div id="extraProp__spec">
-                How many special characters:
-                <input
-                  type="number"
-                  id="specsNumber"
-                  min="1"
-                  max="10"
-                  value="1"
-                  class="rounded ms-1 disabled"
-                />
+
+              <div>
+                <div id="extraProp__cap" class="checkbox-section">
+                  How many captalized letters:
+                  <input
+                    type="number"
+                    id="upsNumber"
+                    min="1"
+                    max="26"
+                    value="1"
+                    class="rounded ms-1 disabled"
+                  />
+                </div>
+                <div id="extraProp__num" class="checkbox-section">
+                  How many numbers:
+                  <input
+                    type="number"
+                    id="numsNumber"
+                    min="1"
+                    max="20"
+                    value="1"
+                    class="rounded ms-1 disabled"
+                  />
+                </div>
+                <div id="extraProp__spec" class="checkbox-section text-start">
+                  How many special characters:
+                  <input
+                    type="number"
+                    id="specsNumber"
+                    min="1"
+                    max="10"
+                    value="1"
+                    class="rounded ms-1 disabled"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </main>
 
-    <section id="footer" class="container-fluid">
-      <footer>
-        <span
-          >All rights reserved. &copy;2023
-          <a href="https://github.com/Bedrock-the-ninth"><i></i></a>
-          <a href="https://t.me/bedrock_the_ninth"><i></i></a>
-        </span>
-      </footer>
+
+        <footer class="py-3 my-4">
+          <div class="justify-content-center border-top pb-1 mb-1">
+            <p class="text-center text-muted">All rights reserved. &copy; 2023.</p>
+          </div>
+        </footer>
+      
     </section>
 
     <!-- jQuery IMPORT -->
